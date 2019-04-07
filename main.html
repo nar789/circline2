@@ -1,0 +1,545 @@
+<html>
+  <head>
+  	<title>올라프유랑단의 시즌2 벚꽃여행</title>
+  	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  	<link rel="stylesheet" type="text/css" href="main.css">
+  	<style>
+  		.card:hover{
+  			opacity: 0.5;
+  		}
+  		body{
+  			background-color: #f5f5f7 !important;
+  		}
+  		#back{
+  			//display: none;
+  		}
+  		#mainpage{
+  			//display: none;
+  		}
+  		#listpage{
+  			display: none;
+  			font-family: 'Do Hyeon', sans-serif;
+  		}
+  		#game1{
+  			display: none;
+  			font-family: 'Do Hyeon', sans-serif;	
+  		}
+  		#game2{
+  			display: none;
+  			font-family: 'Do Hyeon', sans-serif;		
+  		}
+
+  		#game4{
+  			display: none;
+  			font-family: 'Do Hyeon', sans-serif;		
+  		}
+  		#game5{
+  			display: none;
+  			font-family: 'Do Hyeon', sans-serif;		
+  		}
+  		#last-page{
+  			color:white;
+  			text-align: center;
+  			width: 100% !important;
+  			height: 100%;
+  			font-family: 'Do Hyeon', sans-serif;		
+  			background-color: rgba(0,0,0,0.5);
+  		}
+  	
+  	</style>
+  </head>
+  <body>
+  	<div id=back></div>
+  	<div class='container'>
+  	  <div id=mainpage>
+	  	  <div id=header2 class="mt-5">올라프유랑단의 <Br>시즌2 <br>벛꽃여행기</div>
+	  	  <div class=bottom>
+	  	  	<center>
+	  	      <input type='text' class='form-control' id=nick placeholder="이름을 입력해주세요." value="이정헌">
+	  	      <button type="button" class="btn btn-dark" id=start>시작하기</button>
+	  	    </center>
+	  	  </div>
+  	  </div>
+  	  <div id=listpage class='pt-5'>
+		  	<h3 style="float:right"><i class="fas fa-crown"></i>&nbsp;나의점수 <b id=score_point>0</b>&nbsp;점</h3>
+		  	<h3><i class="fas fa-user"></i>&nbsp;<b id=nick-show></b>&nbsp;님 안녕하세요. </h3>
+		  	
+
+		  	<div id=score style="display: none;">
+		  		<br><br>
+		  		
+			  		<h1 style="display: inline-block; font-size: 50px;">헤원</h1>&nbsp;&nbsp;&nbsp;<input id=p5 type=number class="form-control" style="font-size: 30px;width: 150px;display: inline-block;"><br>
+			  		<h1 style="display: inline-block; font-size: 50px;">지헌</h1>&nbsp;&nbsp;&nbsp;<input id=p8 type=number class="form-control" style="font-size: 30px;width: 150px;display: inline-block;"><br>
+			  		<h1 style="display: inline-block; font-size: 50px;">도해</h1>&nbsp;&nbsp;&nbsp;<input id=p3 type=number class="form-control" style="font-size: 30px;width: 150px;display: inline-block;"><br>
+			  		<h1 style="display: inline-block; font-size: 50px;">영석</h1>&nbsp;&nbsp;&nbsp;<input id=p6 type=number class="form-control" style="font-size: 30px;width: 150px;display: inline-block;"><br>
+			  		<h1 style="display: inline-block; font-size: 50px;">근환</h1>&nbsp;&nbsp;&nbsp;<input id=p7 type=number class="form-control" style="font-size: 30px;width: 150px;display: inline-block;"><br>
+			  		<h1 style="display: inline-block; font-size: 50px;">지원</h1>&nbsp;&nbsp;&nbsp;<input id=p2 type=number class="form-control" style="font-size: 30px;width: 150px;display: inline-block;"><br>
+			  		<h1 style="display: inline-block; font-size: 50px;">정헌</h1>&nbsp;&nbsp;&nbsp;<input id=p1 type=number class="form-control" style="font-size: 30px;width: 150px;display: inline-block;"><br>
+			  		<h1 style="display: inline-block; font-size: 50px;">은진</h1>&nbsp;&nbsp;&nbsp;<input id=p4 type=number class="form-control" style="font-size: 30px;width: 150px;display: inline-block;"><br>
+			  		<br>
+	  			
+		  		<button class='btn btn-info' style='font-size: 40px;width: 100%;' id=update_point>포인트수정</button><br><br>
+		  		<button class='btn btn-info' style='font-size: 40px;width: 100%;' id=last>THANKU</button>
+		  		<br>
+		  	</div>
+
+
+		  	<div class='row'>
+			  	<div class='card mt-5 col mr-3' id=menu1>
+			  		<div id=menu1 class=image-cover style="position: absolute;width: 100%;height: 100%;z-index: 0;"></div>
+			  		<div style="z-index: 1;">
+			  			<h1 class='card-title'>서폿팤의 공원살리기</h1>
+			  			<h2 class='card-text'>달라진 공원의 모습을 맞춰보세요.</h2>
+			  		</div>
+			  	</div>
+			  	<div class='card mt-5 col mr-3' id=menu2>
+			  		<div id=menu2 class=image-cover style="position: absolute;width: 100%;height: 100%;z-index: 0;"></div>
+			  		<div style="z-index: 1;">
+			  			<h1 class='card-title'>감자왕국 여왕의 화폐통일</h1>
+			  			<h2 class='card-text'>대신들이여, 만물의 화폐를 감자로 통일하라!</h2>
+			  		</div>
+			  	</div>
+			  	<div class='card mt-5 col mr-3' id=menu3>
+			  		<div id=menu3 class=image-cover style="position: absolute;width: 100%;height: 100%;z-index: 0;"></div>
+			  		<div style="z-index: 1;">
+			  			<h1 class='card-title'>해바라기반 은진샘</h1>
+			  			<h2 class='card-text'>우리의 그림실력으로 은진샘을 기쁘게하자!</h2>
+			  		</div>
+			  	</div>
+		    </div>
+		    <div class='row'>
+			  	<div class='card mt-5 col mr-3' id=menu4>
+			  		<div id=menu4 class=image-cover style="position: absolute;width: 100%;height: 100%;z-index: 0;"></div>
+			  		<div style="z-index: 1;">
+			  			<h1 class='card-title'>혜원누나의 완벽한 하루</h1>
+			  			<h2 class='card-text'>혜원누나의 완벽한 하루를 설계해주세요.</h2>
+			  		</div>
+			  	</div>
+			  	<div class='card mt-5 col mr-3' id=menu5>
+			  		<div id=menu5 class=image-cover style="position: absolute;width: 100%;height: 100%;z-index: 0;"></div>
+			  		<div style="z-index: 1;">
+			  			<h1 class='card-title'>영석짱☆의 바보클럽 가입조건</h1>
+			  			<h2 class='card-text'>엄격한 가입조건을 통과해 바보클럽에 가입하세요.</h2>
+			  		</div>
+			  	</div>
+			  	<div class='card mt-5 col mr-3' id=menu6>
+			  		<div id=menu6 class=image-cover style="position: absolute;width: 100%;height: 100%;z-index: 0;"></div>
+			  		<div style="z-index: 1;">
+			  			<h1 class='card-title'>패피근환의 데일리 화보</h1>
+			  			<h2 class='card-text'>여러분이 스타일리스트가 되어 근환이를 만족시켜주세요.</h2>
+			  		</div>
+			  	</div>
+		    </div>
+		    <div class='row'>
+			  	<div class='card mt-5 col mr-3' id=menu7>
+			  		<div id=menu7 class=image-cover style="position: absolute;width: 100%;height: 100%;z-index: 0;"></div>
+			  		<div style="z-index: 1;">
+			  			<h1 class='card-title'>지헌 회장의 고민</h1>
+			  			<h2 class='card-text'>지헌컴퍼니의 임원이 되어 각자의 역할을 합의해주세요.</h2>
+			  		</div>
+			  	</div>
+		    </div>
+  	  </div>
+  	  <div id=game1 class='pt-5'>
+	  	  	<button class="btn btn-primary" style="font-size: 30px;" id=game1-back>게임선택 화면으로 돌아가기</button><BR>
+	  	  	<center><button class="btn" style="font-size: 100px;color:yellow;" id=timer-disp></button></center>
+	  	  	<br><br>
+	  	  	<div class='card' id=game1-notice>
+	  	  		<div class='card-title' style="font-size: 50px;">서폿팤의 공원살리기</div>
+	  	  		<div class="card-text" style="font-size: 30px;">공원을 사랑하는 서폿팤 수원시장은 아래의 공원을 만들었다. 그래도 부족함을 느꼈는지
+	  	  		새로운 무언가를 추가하였는데, 깨어있는 시민인 우리들이 시장의 노력들을 찾아서 서폿팤 시장을 기쁘게 해주자. 
+	  	  	    추가된 것을 눌렀을 때 1점 획득하지만, 잘못된 것을 누르면 1점 감소된다.</div><br>
+	  	  		<button type="button" class="btn btn-primary" style="font-size: 30px; background-color: #fe7f9c !important;" id=game1-start>게임시작</button>
+	  	  	</div>
+	  	  	<img src=aa.jpg style="position: absolute;left:0px;top:0px;z-index: -1; display: none;" id=gameimg1>
+  	  </div>
+  	  <div id=game2 class='pt-5'>
+		  	  	<button class="btn btn-primary" style="font-size: 30px;" id=game2-back>게임선택 화면으로 돌아가기</button>
+		  	  	<BR>
+		  	  	<br>
+		  	  	<div class='card' id=game2-notice>
+		  	  		<div class='card-title' style="font-size: 50px;">감자왕국 여왕의 화폐통일</div>
+		  	  		<div class="card-text" style="font-size: 30px;">감자왕국 도해 여왕은 화폐 통일이라는 대업적을 이뤄냈다.
+		  	  		하지만 새로 전임온 신하들이 감자의 가치를 잘 모르는거 같아 테스트를 해보기로 했다. 
+		  	  		자! 지금부터 도해 여왕이 하루동안 쇼핑한 물건들을 우리 신하들이 감자로 값어치를 매겨보자!!
+		  	  		</div>
+		  	  		<button type="button" class="btn btn-primary" style="font-size: 30px; background-color: #fe7f9c !important;" id=game2-start>게임시작</button1>
+		  	  	</div>
+		  	  	<br>
+		  	  	<br>
+	  	  		<div class="list-group" style="font-size: 30px;">
+				  <div class="list-group-item list-group-item-action active" style="font-size: 40px;">
+				  	4월 8일 쇼핑 목록
+				  </div>
+				  <div class="list-group-item list-group-item-action">
+				  		<img src='bag.png'>
+				  		<br><br>
+				  		<h3 style="font-size: 30px;">에르메스 버킨백 (₩16,500,000원)</h3>
+				  		<h3 style="font-size: 50px;display: inline-block;">감자</h3>&nbsp;<input type='number' class='qa form-control' style="font-size: 30px;width: 150px; display: inline-block;"><h3 style="font-size: 50px;display: inline-block;">&nbsp;개</h3>
+				  </div>
+				  <div class="list-group-item list-group-item-action">
+				  		<img src='fera.jpg'>
+				  		<br><br>
+				  		<h3 style="font-size: 30px;">페라리 (₩2억 8000만 원)</h3>
+				  		<h3 style="font-size: 50px;display: inline-block;">감자</h3>&nbsp;<input type='number' class='qa form-control' style="font-size: 30px;width: 150px; display: inline-block;"><h3 style="font-size: 50px;display: inline-block;">&nbsp;개</h3>
+				  </div>
+				  <div class="list-group-item list-group-item-action">
+				  		<img src='home1.png'>
+				  		<br><br>
+				  		<h3 style="font-size: 30px;">벤쿠버 초호화주택 방6개, 화장실5개, 창고2개 ($870만 달러)</h3>
+				  		<h3 style="font-size: 50px;display: inline-block;">감자</h3>&nbsp;<input type='number' class='qa form-control' style="font-size: 30px;width: 150px; display: inline-block;"><h3 style="font-size: 50px;display: inline-block;">&nbsp;개</h3>
+				  </div>
+				  <div class="list-group-item list-group-item-action">
+				  		<img src='yort.png'>
+				  		<br><br>
+				  		<h3 style="font-size: 30px;">옆구리가 펼쳐지는 호화요트 (₩13억 원)</h3>
+				  		<h3 style="font-size: 50px;display: inline-block;">감자</h3>&nbsp;<input type='number' class='qa form-control' style="font-size: 30px;width: 150px; display: inline-block;"><h3 style="font-size: 50px;display: inline-block;">&nbsp;개</h3>
+				  </div>
+				</div>
+				<br><br>
+				<button type="button" class="btn btn-primary mb-5" style="font-size: 50px;
+				width: 100%;
+				 background-color: #fe7f9c !important;" id=game2-submit>감자가격 책정 결과 제출</button>
+  	  </div>
+  	  <div id=game4 class='pt-5'>
+	  	  	<button class="btn btn-primary" style="font-size: 30px;" id=game4-back>게임선택 화면으로 돌아가기</button><BR>
+	  	  	<br>
+	  	  	<div class='card' id=game4-notice>
+	  	  		<div class='card-title' style="font-size: 50px;">혜원누나의 완벽한 하루</div>
+	  	  		<div class="card-text" style="font-size: 30px;">
+	  	  			혜원누나는 서울에서 수원까지 출퇴근 하느라 스트레스와 피로도가 과중되었다. 스트레스를 덜 받도록, 동기인 우리가 누나를 도와서
+	  	  			누나의 완벽한 하루를 만들어주자.
+	  	  		</div>
+	  	  		<button type="button" class="btn btn-primary mb-3" style="font-size: 30px; background-color: #fe7f9c !important;" id=game4-start1>게임시작1</button1>
+	  	  	</div>
+	  	  	<br><br><Br>
+	  	  	<div class='card' id=game4-notice2>
+
+	  	  		<div class="card-text" style="font-size: 50px;display: none;" id=g4-q>
+	  	  			처음 시작 질문<br><br>
+	  	  			
+	  	  			1. 회사에 도착한 시간이 바로...<br>
+	  	  			2  친구에게 전화가 왔는데...<br>
+	  	  			3. 소개팅에 나갔는데...<br>
+	  	  		</div><br>
+	  	  		<div>
+	  	  			<center><div class='card-title' style="font-size: 50px; display: none;" id=g4-my >나의 순번 1</div></center>
+	  	  		</div>
+	  	  		
+	  	  	</div>
+
+	  	  	<br>
+	  	  	<br>
+  	  </div>
+
+  	  <div id=game5 class='pt-5'>
+	  	  	<button class="btn btn-primary" style="font-size: 30px;" id=game5-back>게임선택 화면으로 돌아가기</button><BR>
+	  	  	<br>
+	  	  	<div class='card' id=game5-notice>
+	  	  		<div class='card-title' style="font-size: 50px;">영석짱☆의 바보클럽 가입조건</div>
+	  	  		<div class="card-text" style="font-size: 30px;">
+	  	  			영석짱☆은 바보클럽 회장이다. 사내 명문 클럽인 바보클럽은 엄격한 조건을 통과해야만 클럽에 가입될 수 있다.
+	  	  			클럽이 가입되면 임원 코스를 밟을 수 있을 뿐 아니라, 각종 특혜가 기다리고 있으니 엄격한 가입 기준을 통과해보도록 하자!
+	  	  			<br><br>
+	  	  			기준1. 질문에 전혀 상관없는 답변을 해야만 한다.<br>
+	  	  			기준2. 2초안에 답변해야 한다.<br>
+	  	  			기준3. 영석짱과 대기자들이 통과 여부를 판단해준다.<br><br>
+	  	  		</div>
+	  	  		<button type="button" class="btn btn-primary mb-3" style="font-size: 30px; background-color: #fe7f9c !important;" id=game5-start1>게임시작1</button1>
+	  	  	</div>
+	  	  	<br><br><Br>
+	  	  	<div class='card' id=game4-notice2>
+
+	  	  		<div class="card-text" style="font-size: 50px;display: none;" id=g5-q>
+	  	  			처음 시작 질문<br><br>
+	  	  			
+	  	  			혜원누나<br>
+	  	  			1  아침에 일어나서 제일 먼저 하는일?<br>
+	  	  			2. 탕수육 찍먹? 부먹?<br>
+	  	  			3. 남자친구 이름은?<br>
+	  	  			<br>
+	  	  			지원이<br>
+	  	  			1  핸드폰바탕화면 뭐야?<br>
+	  	  			2. 지금가방에 뭐있어?<br>
+	  	  			3. 내가 가장 귀엽다고 느낄 때는?<br>
+	  	  			<br>
+	  	  			이근환<br>
+	  	  			1. 좋아하는 걸그룹은?<br>
+	  	  			2. 애인이 생기면 부르는 애칭은?	<br>
+	  	  			3. 샤워할 때 가장 먼저 씻는 부위는?	<br>
+					<br>
+	  	  			도해누나<br>
+	  	  			1. 지금 몇시에요? 	<br>
+	  	  			2. 나를 보면 떠오르는 생각은?	<br>
+	  	  			3. 근환이와 가장 닮은 사물은?	<br>
+	  	  			<br>
+	  	  			지헌<br>
+	  	  			1. 핸드폰에 여자 친구 번호 몇개있어?	<br>	  	  			
+	  	  			2. 샤워하고 난 후 자신의 몸을 단어로 표현하자면?	<br>
+	  	  			3. 자기가 가장 잘생겼다고 느껴질 때는?	<br>
+
+
+	  	  		</div><br>
+	  	  		<div>
+	  	  			<center><div class='card-title' style="font-size: 50px; display: none;" id=g5-my >나의 순번 1</div></center>
+	  	  		</div>
+	  	  		
+	  	  	</div>
+
+	  	  	<br>
+	  	  	<br>
+  	  </div>
+
+  	  <div id=last-page class="pt-5" style="display: none;">
+  	  	<h1 style="font-size: 100px;">올라프유랑단 <br>시즌2 벚꽃여행기</h1>
+  	  	<br><Br>
+  	  	<h1>
+  	  		우리 살아가는 일 속에<br>
+  	  		파도치는 날 바람부는 날이<br>
+  	  		어디 한두 번이랴 <br>
+  	  		사랑하는 이여<br>
+  	  		상처받지 않은 사랑이 어디 있으랴<br>
+  	  		추운 겨울 다 지내고<br>
+  	  		꽃필 차례가 바로 그대 앞에 있다<br>
+  	  		<br>
+  	  		<그대 앞에 봄이 있다> - 김종해<br>
+  	  		<br>
+  	  		시즌 3도 함께 하기를 기대합니다~!<br>
+  	  		<br>
+  	  		감사합니다.<br>
+
+  	  	</h1>
+  	  </div>
+  	</div>
+
+
+
+
+  	
+  	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src='/socket.io/socket.io.js'></script>
+    <script type="text/javascript">
+    	var socket=io();
+    	var nick='';
+
+    	$('#start').click(()=>{
+    		nick=$('#nick').val();
+    		socket.emit('nick',nick);
+    	});
+
+    	socket.on('nick-is-wrong',()=>{
+    		alert('nick is wrong');
+    	});
+
+    	socket.on('go-page',(page)=>{
+    		if(page==='main2'){
+    			$("#mainpage").css('display','none');
+    		    $('#back').fadeOut('slow',()=>{
+    		    	$('#listpage').fadeIn('slow',()=>{
+    		    		$('#nick-show').html(nick);
+    		    		if(nick==='이정헌')
+    		    			$('#score').css('display','block');
+    		    		socket.emit('get-users');
+    		    	});
+    		    });
+    		}
+    	});
+
+
+    	socket.on('get-users-response',(users)=>{
+    		for(var i=1;i<=8;i++)
+    		{
+    			$('#p'+i).val(users[i].score);
+    			if(users[i].nick===nick)
+    			{
+    				$('#score_point').html(users[i].score);
+    			}
+    		}
+    	});
+
+
+
+    	$('#menu1').click(()=>{
+    		$('#listpage').fadeOut('slow',()=>{
+    			$('#game1').fadeIn('slow');	
+    			$('#gameimg1').attr('src','aa.jpg');
+    			$('#gameimg1').css('display','none');
+    			$('#game1-notice').css('display','block');	
+    			game1_sec=0;
+    			$('#timer-disp').html(''+game1_sec);
+    		});
+    	});
+
+    	$('#menu2').click(()=>{
+    		$('#listpage').fadeOut('slow',()=>{
+    			$('#game2').fadeIn('slow');
+    		});
+    	});
+
+    	$('#menu4').click(()=>{
+    		$('#listpage').fadeOut('slow',()=>{
+    			$('#game4').fadeIn('slow');
+    		});
+    	});
+
+    	$('#menu5').click(()=>{
+    		$('#listpage').fadeOut('slow',()=>{
+    			$('#game5').fadeIn('slow');
+    		});
+    	});
+
+
+		var game1_sec=0;
+		var game1_timer;
+    	$('#game1-start').click(()=>{
+    		$('#game1-notice').css('display','none');
+    		$('#gameimg1').css('display','block');
+    		game1_timer=setInterval(()=>{
+    			game1_sec=game1_sec+1;
+    			if(game1_sec==21){
+    				clearInterval(game1_timer);
+    				game1_stage2();
+    				return;
+    			}
+    			$('#timer-disp').html(''+game1_sec);
+    		},1000);	
+
+    	});
+    	function game1_stage2() {
+    		game1_sec=0;
+    		$('#gameimg1').attr('src',"ab.jpg");
+    		game1_timer=setInterval(()=>{
+    			game1_sec=game1_sec+1;
+    			if(game1_sec==11){
+    				clearInterval(game1_timer);
+    				return;
+    			}
+    			$('#timer-disp').html(''+game1_sec);
+    		},1000);	
+
+    	}
+    	$('#game1-back').click(()=>{
+    		clearInterval(game1_timer);
+    		$('#game1').fadeOut('slow',()=>{
+    			$('#listpage').fadeIn('slow');	
+    		});
+    		
+    	});
+
+
+    	$('#game2-back').click(()=>{
+    		$('#game2').fadeOut('slow',()=>{
+    			$('#listpage').fadeIn('slow');	
+    		});
+    		
+    	});
+
+    	$('#game2-start').click(()=>{
+			$('.qa').removeAttr('disabled');
+    	});
+
+    	$('#game2-submit').click(()=>{
+    		$('.qa').attr('disabled','disabled');
+    	});
+
+    	$('#game4-start1').click(()=>{
+    		if(nick==='정혜원'){
+    			$('#g4-q').css('display','block');
+    		}
+    		else{
+    			$('#g4-my').css('display','block');	
+    			var i=0;
+    			if(nick==="이근환")i=1;
+    			else if(nick==="박지원")i=2;
+    			else if(nick==="장영석")i=3;
+    			else if(nick==="전도해")i=4;
+    			else if(nick==="지헌")i=5;
+
+    			var str="나의 순번은 "+i+"번 입니다.";
+    			if(i==2 || i==4){
+    				str=str+"<br>만족시켜야 하는 순서는 만족/불만족/만족입니다.";
+    			}
+    			else if(i==1 || i==3){
+    				str=str+"<br>만족시켜야 하는 순서는 불만족/만족/불만족입니다.";	
+    			}
+    			else if(i==5){
+    				str=str+"<br>만족시켜야 하는 순서는 만족/만족/만족입니다.";	
+    			}
+    			$('#g4-my').html(str);
+    		}
+    	});
+
+    	$('#game4-back').click(()=>{
+    		$('#game4').fadeOut('slow',()=>{
+    			$('#listpage').fadeIn('slow');	
+    		});
+    	});
+
+
+    	$('#game5-start1').click(()=>{
+    		if(nick==='장영석'){
+    			$('#g5-q').css('display','block');
+    		}
+    		else{
+    			$('#g5-my').css('display','block');	
+    			var i=0;
+    			if(nick==="이근환")i=3;
+    			else if(nick==="박지원")i=2;
+    			else if(nick==="정혜원")i=1;
+    			else if(nick==="전도해")i=4;
+    			else if(nick==="지헌")i=5;
+
+    			var str="나의 순번은 "+i+"번 입니다.";
+    			$('#g5-my').html(str);
+    		}
+    	});
+
+    	$('#game5-back').click(()=>{
+			$('#game5').fadeOut('slow',()=>{
+    			$('#listpage').fadeIn('slow');	
+    		});
+    	});
+
+    	$('#update_point').click(()=>{
+    		var score=[];
+    		score.push(0);
+    		for(var i=1;i<=8;i++)
+    		{
+    			score.push(parseInt($('#p'+i).val()));
+    		}
+    		socket.emit('set-score',score);
+    	});
+
+    	$('#last').click(()=>{
+    		socket.emit('lastshow');
+    	});	
+
+    	socket.on('lastshow',()=>{
+    		lastshow();
+    	});
+
+    	function lastshow()
+    	{
+
+    		$('#main').css('display','none');
+    		$('#listpage').css('display','none');
+    		$('#game1').css('display','none');
+    		$('#game2').css('display','none');
+    		$('#game4').css('display','none');
+    		$('#game5').css('display','none');
+
+    		$('#back').css('display','block');
+    		$('#last-page').css('display','block');
+    	}
+
+    </script>
+  </body>
+
+</html>
